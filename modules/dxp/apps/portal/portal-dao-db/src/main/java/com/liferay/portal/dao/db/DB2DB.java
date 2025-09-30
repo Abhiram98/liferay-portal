@@ -224,7 +224,7 @@ public class DB2DB extends BaseDB {
 	}
 
 	@Override
-	public boolean isSupportsCollation(Connection connection)
+	public boolean getCharacterSet(Connection connection)
 		throws SQLException {
 
 		try (PreparedStatement preparedStatement = connection.prepareStatement(
