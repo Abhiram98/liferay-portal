@@ -73,7 +73,7 @@ public class ForgotPasswordMVCActionCommandTest {
 
 		_createUser(true, false);
 
-		try (SafeCloseable safeCloseable =
+		try (SafeCloseable ldapAuthConfigurationProviderTemporarySwapper =
 				_updateLDAPAuthConfigurationWithSafeCloseable(true)) {
 
 			List<Ticket> tickets = _processAction();
