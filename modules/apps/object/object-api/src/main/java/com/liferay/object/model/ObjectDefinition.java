@@ -108,6 +108,6 @@ public interface ObjectDefinition
 
 	public void setRootObjectDefinitionIds(
 		long[] rootObjectDefinitionIdsToAdd,
-		long[] rootObjectDefinitionIdsToRemove);
+		long[] removeRootObjectDefinitionIds);
 
 }
