@@ -928,7 +928,7 @@ public class PatcherBuildUtil {
 	}
 
 	public static void notifyUsersInactivePatcherBuilds(
-			AlloyController alloyController)
+			AlloyController themeDisplay)
 		throws Exception {
 
 		Calendar calendar = new GregorianCalendar();
@@ -953,11 +953,11 @@ public class PatcherBuildUtil {
 
 			EmailUtil.sendPatcherTimeoutEmail(
 				patcherBuild, user.getEmailAddress(),
-				alloyController.getThemeDisplay());
+				themeDisplay.getThemeDisplay());
 
 			patcherBuild.setNotified(true);
 
-			alloyController.updateModelIgnoreRequest(patcherBuild);
+			themeDisplay.updateModelIgnoreRequest(patcherBuild);
 		}
 	}
 
