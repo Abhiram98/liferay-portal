@@ -56,7 +56,7 @@ public interface ErcAssetLibraryTestEntityResource {
 
 	public ErcAssetLibraryTestEntity getAssetLibraryErcAssetLibraryTestEntity(
 			String ercAssetLibraryTestEntityExternalReferenceCode,
-			String AssetLibraryExternalReferenceCode)
+			String assetLibraryExternalReferenceCode)
 		throws Exception;
 
 	public Response postAssetLibraryErcAssetLibraryTestEntitiesPageExportBatch(
