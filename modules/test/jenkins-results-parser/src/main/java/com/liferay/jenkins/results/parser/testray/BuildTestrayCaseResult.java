@@ -42,7 +42,7 @@ public abstract class BuildTestrayCaseResult extends TestrayCaseResult {
 
 	@Override
 	public long getDuration() {
-		Build build = getBuild();
+		Build build = getBuildReport();
 
 		if (build == null) {
 			return 0;
@@ -53,7 +53,7 @@ public abstract class BuildTestrayCaseResult extends TestrayCaseResult {
 
 	@Override
 	public Status getStatus() {
-		Build build = getBuild();
+		Build build = getBuildReport();
 
 		if (build == null) {
 			return Status.UNTESTED;
@@ -66,7 +66,7 @@ public abstract class BuildTestrayCaseResult extends TestrayCaseResult {
 		return Status.PASSED;
 	}
 
-	protected abstract Build getBuild();
+	protected abstract Build getBuildReport();
 
 	protected TestrayAttachment getTestrayAttachment(
 		Build build, String name, String key) {
