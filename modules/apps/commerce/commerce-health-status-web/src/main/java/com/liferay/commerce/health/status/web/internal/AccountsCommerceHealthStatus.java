@@ -133,7 +133,7 @@ public class AccountsCommerceHealthStatus implements CommerceHealthStatus {
 			Propagation.REQUIRED, new Class<?>[] {Exception.class});
 
 	@Reference
-	private CommerceAccountRoleHelper _commerceAccountRoleHelper;
+	private CommerceAccountRoleHelper _commerceRoleHelper;
 
 	@Reference
 	private Language _language;
@@ -145,7 +145,7 @@ public class AccountsCommerceHealthStatus implements CommerceHealthStatus {
 
 		@Override
 		public Object call() throws Exception {
-			_commerceAccountRoleHelper.checkCommerceAccountRoles(
+			_commerceRoleHelper.checkCommerceAccountRoles(
 				_serviceContext);
 
 			return null;
