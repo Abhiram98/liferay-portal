@@ -957,7 +957,7 @@ public abstract class BaseTestEntityResourceImpl
 	private static final com.liferay.portal.kernel.log.Log _log =
 		LogFactoryUtil.getLog(BaseTestEntityResourceImpl.class);
 
-	private class PostTestEntityMultiformBulkRequestBody {
+	private class PostTestEntityMultipartBulkRequestBody {
 
 		public TestEntity[] testEntities;
 
