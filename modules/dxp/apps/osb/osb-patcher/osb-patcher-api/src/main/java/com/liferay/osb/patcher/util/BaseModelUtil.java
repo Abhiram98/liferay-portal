@@ -48,7 +48,7 @@ public class BaseModelUtil {
 		try {
 			return getBaseModelRequestKey(baseModel);
 		}
-		catch (Exception e) {
+		catch (Exception exception) {
 			return null;
 		}
 	}
