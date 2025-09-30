@@ -50,13 +50,13 @@ public class SXPBlueprint implements Cloneable, Serializable {
 	protected Map<String, Map<String, String>> actions;
 
 	public String getCollectionProviderSubTypeName() {
-		return collectionProviderSubTypeName;
+		return collectionProviderSubtypeName;
 	}
 
 	public void setCollectionProviderSubTypeName(
 		String collectionProviderSubTypeName) {
 
-		this.collectionProviderSubTypeName = collectionProviderSubTypeName;
+		this.collectionProviderSubtypeName = collectionProviderSubTypeName;
 	}
 
 	public void setCollectionProviderSubTypeName(
@@ -64,7 +64,7 @@ public class SXPBlueprint implements Cloneable, Serializable {
 			collectionProviderSubTypeNameUnsafeSupplier) {
 
 		try {
-			collectionProviderSubTypeName =
+			collectionProviderSubtypeName =
 				collectionProviderSubTypeNameUnsafeSupplier.get();
 		}
 		catch (Exception e) {
@@ -72,7 +72,7 @@ public class SXPBlueprint implements Cloneable, Serializable {
 		}
 	}
 
-	protected String collectionProviderSubTypeName;
+	protected String collectionProviderSubtypeName;
 
 	public String getCollectionProviderTypeName() {
 		return collectionProviderTypeName;
