@@ -145,7 +145,7 @@ public class JournalArticleLocalizationPersistenceImpl
 		long articlePK, int start, int end,
 		OrderByComparator<JournalArticleLocalization> orderByComparator) {
 
-		return findByArticlePK(articlePK, start, end, orderByComparator, true);
+		return findByC_A(articlePK, start, end, orderByComparator, true);
 	}
 
 	/**
@@ -163,7 +163,7 @@ public class JournalArticleLocalizationPersistenceImpl
 	 * @return the ordered range of matching journal article localizations
 	 */
 	@Override
-	public List<JournalArticleLocalization> findByArticlePK(
+	public List<JournalArticleLocalization> findByC_A(
 		long articlePK, int start, int end,
 		OrderByComparator<JournalArticleLocalization> orderByComparator,
 		boolean useFinderCache) {
