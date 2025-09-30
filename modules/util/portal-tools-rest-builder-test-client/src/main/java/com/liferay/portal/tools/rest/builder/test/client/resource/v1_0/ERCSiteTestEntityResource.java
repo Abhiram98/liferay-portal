@@ -95,7 +95,7 @@ public interface ERCSiteTestEntityResource {
 		throws Exception;
 
 	public ERCSiteTestEntity
-			putSiteERCSiteTestEntityErcSiteTestEntityExternalReferenceCode(
+	putSiteERCSiteTestEntity(
 				String ercSiteTestEntityExternalReferenceCode,
 				String siteExternalReferenceCode,
 				ERCSiteTestEntity ercSiteTestEntity)
@@ -895,7 +895,7 @@ public interface ERCSiteTestEntityResource {
 		}
 
 		public ERCSiteTestEntity
-				putSiteERCSiteTestEntityErcSiteTestEntityExternalReferenceCode(
+		putSiteERCSiteTestEntity(
 					String ercSiteTestEntityExternalReferenceCode,
 					String siteExternalReferenceCode,
 					ERCSiteTestEntity ercSiteTestEntity)
