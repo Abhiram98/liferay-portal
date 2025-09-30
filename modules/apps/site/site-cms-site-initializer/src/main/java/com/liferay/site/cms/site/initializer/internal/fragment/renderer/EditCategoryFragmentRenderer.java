@@ -32,7 +32,7 @@ import org.osgi.service.component.annotations.Reference;
 public class EditCategoryFragmentRenderer extends BaseSectionFragmentRenderer {
 
 	@Override
-	public String getCollectionKey() {
+	public String getLabelKey() {
 		return "edit-category";
 	}
 
