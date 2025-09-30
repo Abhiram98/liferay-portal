@@ -30,9 +30,9 @@ import org.osgi.framework.FrameworkUtil;
 /**
  * @author Adam Brandizzi
  */
-public class CompanyIndexFactoryFixture {
+public class IndexFactoryFixture {
 
-	public CompanyIndexFactoryFixture(
+	public IndexFactoryFixture(
 		ElasticsearchClientResolver elasticsearchClientResolver,
 		String indexName) {
 
