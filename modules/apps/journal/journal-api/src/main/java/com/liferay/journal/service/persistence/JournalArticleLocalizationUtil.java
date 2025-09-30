@@ -215,7 +215,7 @@ public class JournalArticleLocalizationUtil {
 	 * @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
 	 * @return the first matching journal article localization, or <code>null</code> if a matching journal article localization could not be found
 	 */
-	public static JournalArticleLocalization fetchByArticlePK_First(
+	public static JournalArticleLocalization fetchByC_A_Last(
 		long articlePK,
 		OrderByComparator<JournalArticleLocalization> orderByComparator) {
 
