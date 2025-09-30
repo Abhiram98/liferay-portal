@@ -1947,12 +1947,12 @@ public class PatcherBuildUtil {
 
 	protected static void updatePatcherBuildStatus(
 			AlloyController alloyController, User user,
-			PatcherBuild patcherBuild, int OSBPatcherServletOutcomeStatus,
+			PatcherBuild patcherBuild, int osbPatcherServletOutcomeStatus,
 			String OSBPatcherServletOutcomeResult, List<String> messages)
 		throws Exception {
 
-		if (OSBPatcherServletOutcomeStatus ==
-				OSBPatcherServletOutcome.STATUS_SUCCESS) {
+		if (osbPatcherServletOutcomeStatus ==
+			OSBPatcherServletOutcome.STATUS_SUCCESS) {
 
 			PatcherFix patcherFix = PatcherFixLocalServiceUtil.getPatcherFix(
 				patcherBuild.getPatcherFixId());
@@ -1973,8 +1973,8 @@ public class PatcherBuildUtil {
 					" with name ", patcherBuild.getName(), " was successful."),
 				messages);
 		}
-		else if (OSBPatcherServletOutcomeStatus ==
-					OSBPatcherServletOutcome.STATUS_CONFLICT) {
+		else if (osbPatcherServletOutcomeStatus ==
+				 OSBPatcherServletOutcome.STATUS_CONFLICT) {
 
 			PatcherUtil.addMessage(
 				StringBundler.concat(
