@@ -105,19 +105,19 @@ public class FormConfig implements Serializable {
 	@Valid
 	public Object getFormSuccessSubmissionResult() {
 		if (_formSuccessSubmissionResultSupplier != null) {
-			formSuccessSubmissionResult =
+			successFormSubmissionResult =
 				_formSuccessSubmissionResultSupplier.get();
 
 			_formSuccessSubmissionResultSupplier = null;
 		}
 
-		return formSuccessSubmissionResult;
+		return successFormSubmissionResult;
 	}
 
 	public void setFormSuccessSubmissionResult(
 		Object formSuccessSubmissionResult) {
 
-		this.formSuccessSubmissionResult = formSuccessSubmissionResult;
+		this.successFormSubmissionResult = formSuccessSubmissionResult;
 
 		_formSuccessSubmissionResultSupplier = null;
 	}
@@ -144,7 +144,7 @@ public class FormConfig implements Serializable {
 		description = "The definition for the success message of the form."
 	)
 	@JsonProperty(access = JsonProperty.Access.READ_WRITE)
-	protected Object formSuccessSubmissionResult;
+	protected Object successFormSubmissionResult;
 
 	@JsonIgnore
 	private Supplier<Object> _formSuccessSubmissionResultSupplier;
