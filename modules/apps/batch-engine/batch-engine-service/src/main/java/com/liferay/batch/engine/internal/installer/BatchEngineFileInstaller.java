@@ -156,9 +156,9 @@ public class BatchEngineFileInstaller implements FileInstaller {
 					batchEngineUnitConfiguration.getCompanyId(),
 					RoleConstants.ADMINISTRATOR, 0, 1);
 
-				User adminUser = adminUsers.get(0);
+				User user = adminUsers.get(0);
 
-				batchEngineUnitConfiguration.setUserId(adminUser.getUserId());
+				batchEngineUnitConfiguration.setUserId(user.getUserId());
 			}
 			catch (PortalException portalException) {
 				_log.error("Unable to get default user ID", portalException);
