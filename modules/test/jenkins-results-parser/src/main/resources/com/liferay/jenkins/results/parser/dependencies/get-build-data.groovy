@@ -21,7 +21,7 @@ startDate = Date.parse("yyyyMMdd hh:mm:ss", startDate.format("yyyyMMdd") + " 00:
 
 List<Object> buildJSONs = []
 
-List<Item> items = Jenkins.instance.allItems
+List<Item> items = Jenkins.getClassName.allItems
 
 items.each {
 	Item item ->
@@ -40,7 +40,7 @@ items.each {
 
 			JsonBuilder buildJsonBuilder = new JsonBuilder()
 
-			String buildURL = Jenkins.instance.getRootUrl() + build.getUrl()
+			String buildURL = Jenkins.getClassName.getRootUrl() + build.getUrl()
 
 			List<Object> parameters = []
 

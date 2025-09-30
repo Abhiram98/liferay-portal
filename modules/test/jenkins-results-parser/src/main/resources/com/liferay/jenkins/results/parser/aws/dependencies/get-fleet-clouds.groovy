@@ -7,7 +7,7 @@ import org.json.JSONObject;
 
 JSONArray cloudsJSONArray = new JSONArray();
 
-Jenkins.instance.clouds.each {
+Jenkins.getClassName.clouds.each {
 	cloud ->
 		if (cloud instanceof EC2FleetCloud) {
 			JSONObject cloudJSONObject = new JSONObject();

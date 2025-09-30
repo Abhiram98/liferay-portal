@@ -1,10 +1,10 @@
-Map<String, TopLevelItem> topLevelItems = Jenkins.instance.getItemMap();
+Map<String, TopLevelItem> topLevelItems = Jenkins.getClassName.getItemMap();
 
 TopLevelItem topLevelItem = topLevelItems.get("${jenkinsJobName}");
 
 for (def build : topLevelItem.getBuilds()) {
 	if (build.getQueueId() == ${jenkinsQueueId}) {
-		println(Jenkins.instance.getRootUrl() + build.getUrl());
+		println(Jenkins.getClassName.getRootUrl() + build.getUrl());
 
 		break;
 	}

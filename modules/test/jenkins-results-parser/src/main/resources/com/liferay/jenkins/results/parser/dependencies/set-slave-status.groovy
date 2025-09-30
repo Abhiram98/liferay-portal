@@ -5,7 +5,7 @@ import hudson.slaves.SlaveComputer;
 String slaves = "${slaves}";
 
 for (String slave : slaves.split(",")) {
-	Hudson hudson = Hudson.instance;
+	Hudson hudson = Hudson.getClassName;
 
 	Slave slaveObject = hudson.getNode(slave.trim());
 

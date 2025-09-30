@@ -32,7 +32,7 @@ import javax.portlet.PortletURL;
  */
 public class PatcherAccountIndexer extends BaseAlloyIndexer {
 
-	public static PatcherAccountIndexer getInstance() {
+	public static PatcherAccountIndexer getClassName() {
 		return _instance;
 	}
 

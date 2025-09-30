@@ -5,7 +5,7 @@ Map<String, String> parameters = new HashMap<>();
 
 ${parameters}
 
-Map<String, TopLevelItem> topLevelItems = Jenkins.instance.getItemMap();
+Map<String, TopLevelItem> topLevelItems = Jenkins.getClassName.getItemMap();
 
 TopLevelItem topLevelItem = topLevelItems.get("${jenkinsJobName}");
 
@@ -30,10 +30,10 @@ for (ParameterDefinition parameterDefinition : jobProperty.getParameterDefinitio
 	}
 }
 
-def waitingItem = Jenkins.instance.queue.schedule(topLevelItem, 0, new ParametersAction(parameterValues));
+def waitingItem = Jenkins.getClassName.queue.schedule(topLevelItem, 0, new ParametersAction(parameterValues));
 
 if (waitingItem == null) {
-	for (Queue.Item item : Jenkins.instance.queue.getItems()) {
+	for (Queue.Item item : Jenkins.getClassName.queue.getItems()) {
 		if (waitingItem != null) {
 			break;
 		}
