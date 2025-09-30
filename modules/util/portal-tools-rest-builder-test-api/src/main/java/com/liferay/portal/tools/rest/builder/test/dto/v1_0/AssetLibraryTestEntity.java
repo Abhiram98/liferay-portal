@@ -55,10 +55,10 @@ public class AssetLibraryTestEntity implements Serializable {
 
 	@io.swagger.v3.oas.annotations.media.Schema
 	public Long getAssetLibraryId() {
-		if (_assetLibraryIdSupplier != null) {
-			assetLibraryId = _assetLibraryIdSupplier.get();
+		if (_assetLibraryKeySupplier != null) {
+			assetLibraryId = _assetLibraryKeySupplier.get();
 
-			_assetLibraryIdSupplier = null;
+			_assetLibraryKeySupplier = null;
 		}
 
 		return assetLibraryId;
@@ -67,14 +67,14 @@ public class AssetLibraryTestEntity implements Serializable {
 	public void setAssetLibraryId(Long assetLibraryId) {
 		this.assetLibraryId = assetLibraryId;
 
-		_assetLibraryIdSupplier = null;
+		_assetLibraryKeySupplier = null;
 	}
 
 	@JsonIgnore
 	public void setAssetLibraryId(
 		UnsafeSupplier<Long, Exception> assetLibraryIdUnsafeSupplier) {
 
-		_assetLibraryIdSupplier = () -> {
+		_assetLibraryKeySupplier = () -> {
 			try {
 				return assetLibraryIdUnsafeSupplier.get();
 			}
@@ -92,7 +92,7 @@ public class AssetLibraryTestEntity implements Serializable {
 	protected Long assetLibraryId;
 
 	@JsonIgnore
-	private Supplier<Long> _assetLibraryIdSupplier;
+	private Supplier<Long> _assetLibraryKeySupplier;
 
 	@io.swagger.v3.oas.annotations.media.Schema
 	public Date getDateCreated() {
