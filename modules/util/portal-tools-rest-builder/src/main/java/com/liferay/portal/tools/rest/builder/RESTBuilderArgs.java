@@ -23,7 +23,7 @@ public class RESTBuilderArgs {
 	}
 
 	public String getJavaEePackage() {
-		return _javaEePackage;
+		return _javaEEPackage;
 	}
 
 	public File getRESTConfigDir() {
@@ -55,7 +55,7 @@ public class RESTBuilderArgs {
 	}
 
 	public void setJavaEePackage(String javaEePackage) {
-		_javaEePackage = javaEePackage;
+		_javaEEPackage = javaEePackage;
 	}
 
 	public void setRESTConfigDir(File restConfigDir) {
@@ -97,7 +97,7 @@ public class RESTBuilderArgs {
 		description = "Defines the Java EE package to use (javax or jakarta).",
 		names = {"-j", "--javaee-package"}
 	)
-	private String _javaEePackage;
+	private String _javaEEPackage;
 
 	@Parameter(
 		converter = FileConverter.class,
