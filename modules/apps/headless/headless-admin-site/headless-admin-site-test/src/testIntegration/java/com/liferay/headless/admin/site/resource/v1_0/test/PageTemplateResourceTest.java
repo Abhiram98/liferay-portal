@@ -164,7 +164,7 @@ public class PageTemplateResourceTest extends BasePageTemplateResourceTestCase {
 	@Ignore
 	@Override
 	@Test
-	public void testGetSiteSiteByExternalReferenceCodePageTemplatePermissionsPage()
+	public void testGetSitePageTemplatePermissionsPage()
 		throws Exception {
 
 		super.
