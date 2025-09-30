@@ -174,21 +174,21 @@ public abstract class BaseDataLayoutBuilderTag extends com.liferay.taglib.util.I
 	}
 
 	@Override
-	protected void setAttributes(HttpServletRequest request) {
-		setNamespacedAttribute(request, "additionalPanels", _additionalPanels);
-		setNamespacedAttribute(request, "componentId", _componentId);
-		setNamespacedAttribute(request, "contentType", _contentType);
-		setNamespacedAttribute(request, "dataDefinitionId", _dataDefinitionId);
-		setNamespacedAttribute(request, "dataLayoutId", _dataLayoutId);
-		setNamespacedAttribute(request, "displayFieldName", _displayFieldName);
-		setNamespacedAttribute(request, "fieldSetContentType", _fieldSetContentType);
-		setNamespacedAttribute(request, "groupId", _groupId);
-		setNamespacedAttribute(request, "localizable", _localizable);
-		setNamespacedAttribute(request, "moduleServletContext", _moduleServletContext);
-		setNamespacedAttribute(request, "namespace", _namespace);
-		setNamespacedAttribute(request, "scopes", _scopes);
-		setNamespacedAttribute(request, "searchableFieldsDisabled", _searchableFieldsDisabled);
-		setNamespacedAttribute(request, "submitButtonId", _submitButtonId);
+	protected void setAttributes(HttpServletRequest httpServletRequest) {
+		setNamespacedAttribute(httpServletRequest, "additionalPanels", _additionalPanels);
+		setNamespacedAttribute(httpServletRequest, "componentId", _componentId);
+		setNamespacedAttribute(httpServletRequest, "contentType", _contentType);
+		setNamespacedAttribute(httpServletRequest, "dataDefinitionId", _dataDefinitionId);
+		setNamespacedAttribute(httpServletRequest, "dataLayoutId", _dataLayoutId);
+		setNamespacedAttribute(httpServletRequest, "displayFieldName", _displayFieldName);
+		setNamespacedAttribute(httpServletRequest, "fieldSetContentType", _fieldSetContentType);
+		setNamespacedAttribute(httpServletRequest, "groupId", _groupId);
+		setNamespacedAttribute(httpServletRequest, "localizable", _localizable);
+		setNamespacedAttribute(httpServletRequest, "moduleServletContext", _moduleServletContext);
+		setNamespacedAttribute(httpServletRequest, "namespace", _namespace);
+		setNamespacedAttribute(httpServletRequest, "scopes", _scopes);
+		setNamespacedAttribute(httpServletRequest, "searchableFieldsDisabled", _searchableFieldsDisabled);
+		setNamespacedAttribute(httpServletRequest, "submitButtonId", _submitButtonId);
 	}
 
 	protected static final String _ATTRIBUTE_NAMESPACE = "liferay-data-engine:data-layout-builder:";
