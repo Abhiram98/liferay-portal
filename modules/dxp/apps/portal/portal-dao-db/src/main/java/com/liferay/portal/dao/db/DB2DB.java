@@ -197,7 +197,7 @@ public class DB2DB extends BaseDB {
 	}
 
 	@Override
-	public boolean isSupportUnicode(Connection connection)
+	public boolean isSupportsCollation(Connection connection)
 		throws SQLException {
 
 		try (PreparedStatement preparedStatement = connection.prepareStatement(
