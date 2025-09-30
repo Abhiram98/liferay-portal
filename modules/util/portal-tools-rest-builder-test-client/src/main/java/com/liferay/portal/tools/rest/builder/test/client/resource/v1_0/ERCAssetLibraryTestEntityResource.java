@@ -101,7 +101,7 @@ public interface ERCAssetLibraryTestEntityResource {
 		throws Exception;
 
 	public ERCAssetLibraryTestEntity
-			putAssetLibraryERCAssetLibraryTestEntityErcAssetLibraryTestEntityExternalReferenceCode(
+	putAssetLibraryERCAssetLibraryTestEntity(
 				String assetLibraryExternalReferenceCode,
 				String ercAssetLibraryTestEntityExternalReferenceCode,
 				ERCAssetLibraryTestEntity ercAssetLibraryTestEntity)
@@ -912,7 +912,7 @@ public interface ERCAssetLibraryTestEntityResource {
 		}
 
 		public ERCAssetLibraryTestEntity
-				putAssetLibraryERCAssetLibraryTestEntityErcAssetLibraryTestEntityExternalReferenceCode(
+		putAssetLibraryERCAssetLibraryTestEntity(
 					String assetLibraryExternalReferenceCode,
 					String ercAssetLibraryTestEntityExternalReferenceCode,
 					ERCAssetLibraryTestEntity ercAssetLibraryTestEntity)
