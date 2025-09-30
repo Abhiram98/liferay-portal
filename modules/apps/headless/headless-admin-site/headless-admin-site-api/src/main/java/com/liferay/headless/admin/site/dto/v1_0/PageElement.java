@@ -54,10 +54,10 @@ public class PageElement implements Serializable {
 	)
 	@Valid
 	public PageElementDefinition getDefinition() {
-		if (_definitionSupplier != null) {
-			definition = _definitionSupplier.get();
+		if (_pageElementDefinitionSupplier != null) {
+			definition = _pageElementDefinitionSupplier.get();
 
-			_definitionSupplier = null;
+			_pageElementDefinitionSupplier = null;
 		}
 
 		return definition;
@@ -66,7 +66,7 @@ public class PageElement implements Serializable {
 	public void setDefinition(PageElementDefinition definition) {
 		this.definition = definition;
 
-		_definitionSupplier = null;
+		_pageElementDefinitionSupplier = null;
 	}
 
 	@JsonIgnore
@@ -74,7 +74,7 @@ public class PageElement implements Serializable {
 		UnsafeSupplier<PageElementDefinition, Exception>
 			definitionUnsafeSupplier) {
 
-		_definitionSupplier = () -> {
+		_pageElementDefinitionSupplier = () -> {
 			try {
 				return definitionUnsafeSupplier.get();
 			}
@@ -92,7 +92,7 @@ public class PageElement implements Serializable {
 	protected PageElementDefinition definition;
 
 	@JsonIgnore
-	private Supplier<PageElementDefinition> _definitionSupplier;
+	private Supplier<PageElementDefinition> _pageElementDefinitionSupplier;
 
 	@io.swagger.v3.oas.annotations.media.Schema(
 		description = "The page element's external reference code. Unique within the site."
