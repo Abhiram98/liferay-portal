@@ -277,7 +277,7 @@ public class ObjectEntryLocalServiceUtil {
 		return getService().dynamicQueryCount(dynamicQuery, projection);
 	}
 
-	public static ObjectEntry expireObjectEntry(
+	public static ObjectEntry expireObjectEntryVersion(
 			long userId, long objectEntryId, int version,
 			com.liferay.portal.kernel.service.ServiceContext serviceContext)
 		throws PortalException {
