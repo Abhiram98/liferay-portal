@@ -58,7 +58,7 @@ public class BatchBuildTestrayCaseResult extends BuildTestrayCaseResult {
 	}
 
 	@Override
-	public Build getBuild() {
+	public Build getDownstreamBuildReport() {
 		TopLevelBuild topLevelBuild = getTopLevelBuild();
 
 		DownstreamBuild downstreamBuild = topLevelBuild.getDownstreamBuild(
@@ -85,7 +85,7 @@ public class BatchBuildTestrayCaseResult extends BuildTestrayCaseResult {
 
 	@Override
 	public String getErrors() {
-		Build build = getBuild();
+		Build build = getDownstreamBuildReport();
 
 		if (build == null) {
 			return "Unable to run on CI";
@@ -294,7 +294,7 @@ public class BatchBuildTestrayCaseResult extends BuildTestrayCaseResult {
 		List<TestrayAttachment> testrayAttachments = new ArrayList<>();
 
 		TestrayAttachment testrayAttachment = getTestrayAttachment(
-			getBuild(), "Liferay Log",
+			getDownstreamBuildReport(), "Liferay Log",
 			getAxisBuildURLPath() + "/liferay-log.txt.gz");
 
 		if (testrayAttachment == null) {
@@ -306,7 +306,7 @@ public class BatchBuildTestrayCaseResult extends BuildTestrayCaseResult {
 		for (int i = 1; i <= 5; i++) {
 			TestrayAttachment liferayLogTestrayAttachment =
 				getTestrayAttachment(
-					getBuild(), "Liferay Log (" + i + ")",
+					getDownstreamBuildReport(), "Liferay Log (" + i + ")",
 					JenkinsResultsParserUtil.combine(
 						getAxisBuildURLPath(), "/liferay-log-",
 						String.valueOf(i), ".txt.gz"));
@@ -325,7 +325,7 @@ public class BatchBuildTestrayCaseResult extends BuildTestrayCaseResult {
 		List<TestrayAttachment> testrayAttachments = new ArrayList<>();
 
 		TestrayAttachment testrayAttachment = getTestrayAttachment(
-			getBuild(), "Liferay OSGi Log",
+			getDownstreamBuildReport(), "Liferay OSGi Log",
 			getAxisBuildURLPath() + "/liferay-osgi-log.txt.gz");
 
 		if (testrayAttachment == null) {
@@ -337,7 +337,7 @@ public class BatchBuildTestrayCaseResult extends BuildTestrayCaseResult {
 		for (int i = 1; i <= 5; i++) {
 			TestrayAttachment liferayOSGiLogTestrayAttachment =
 				getTestrayAttachment(
-					getBuild(), "Liferay OSGi Log (" + i + ")",
+					getDownstreamBuildReport(), "Liferay OSGi Log (" + i + ")",
 					JenkinsResultsParserUtil.combine(
 						getAxisBuildURLPath(), "/liferay-osgi-log-",
 						String.valueOf(i), ".txt.gz"));
@@ -369,7 +369,7 @@ public class BatchBuildTestrayCaseResult extends BuildTestrayCaseResult {
 	protected String getTestResultErrors() {
 		String testResultErrors = null;
 
-		Build build = getBuild();
+		Build build = getDownstreamBuildReport();
 
 		TestResult testResult = getTestResult();
 
@@ -437,7 +437,7 @@ public class BatchBuildTestrayCaseResult extends BuildTestrayCaseResult {
 	}
 
 	protected Status getTestResultStatus() {
-		Build build = getBuild();
+		Build build = getDownstreamBuildReport();
 
 		if (build == null) {
 			return Status.UNTESTED;
@@ -536,7 +536,7 @@ public class BatchBuildTestrayCaseResult extends BuildTestrayCaseResult {
 	private List<TestrayAttachment> _getDockerLogsTestrayAttachments() {
 		List<TestrayAttachment> testrayAttachments = new ArrayList<>();
 
-		Build build = getBuild();
+		Build build = getDownstreamBuildReport();
 
 		if (build == null) {
 			return testrayAttachments;
@@ -562,7 +562,7 @@ public class BatchBuildTestrayCaseResult extends BuildTestrayCaseResult {
 	private List<TestrayAttachment> _getGCLogsTestrayAttachments() {
 		List<TestrayAttachment> testrayAttachments = new ArrayList<>();
 
-		Build build = getBuild();
+		Build build = getDownstreamBuildReport();
 
 		if (build == null) {
 			return testrayAttachments;
@@ -587,7 +587,7 @@ public class BatchBuildTestrayCaseResult extends BuildTestrayCaseResult {
 
 	private TestrayAttachment _getGradlePluginsAttachment() {
 		return getTestrayAttachment(
-			getBuild(), "Gradle Plugins Test Report",
+			getDownstreamBuildReport(), "Gradle Plugins Test Report",
 			getAxisBuildURLPath() + "/gradle_plugins.tar.gz");
 	}
 
@@ -596,13 +596,13 @@ public class BatchBuildTestrayCaseResult extends BuildTestrayCaseResult {
 		String key = getAxisBuildURLPath() + "/jenkins-console.txt.gz";
 
 		TestrayAttachment testrayAttachment = getTestrayAttachment(
-			getBuild(), name, key);
+			getDownstreamBuildReport(), name, key);
 
 		if (testrayAttachment != null) {
 			return testrayAttachment;
 		}
 
-		final Build build = getBuild();
+		final Build build = getDownstreamBuildReport();
 
 		if (build == null) {
 			return null;
@@ -662,7 +662,7 @@ public class BatchBuildTestrayCaseResult extends BuildTestrayCaseResult {
 	private List<TestrayAttachment> _getJStacksTestrayAttachments() {
 		List<TestrayAttachment> testrayAttachments = new ArrayList<>();
 
-		Build build = getBuild();
+		Build build = getDownstreamBuildReport();
 
 		if (build == null) {
 			return testrayAttachments;
@@ -687,7 +687,7 @@ public class BatchBuildTestrayCaseResult extends BuildTestrayCaseResult {
 
 	private TestrayAttachment _getWarningsTestrayAttachment() {
 		return getTestrayAttachment(
-			getBuild(), "Warnings",
+			getDownstreamBuildReport(), "Warnings",
 			getAxisBuildURLPath() + "/warnings.html.gz");
 	}
 
