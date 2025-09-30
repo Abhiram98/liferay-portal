@@ -238,7 +238,7 @@ public class DDMStructureCacheModel
 
 		ddmStructureImpl.setDDMForm(_ddmForm);
 
-		ddmStructureImpl.setDDMFormFieldsMap(_ddmFormFieldsMap);
+		ddmStructureImpl.setDDMFormFieldsMap(ddmFormFieldsMap);
 
 		return ddmStructureImpl;
 	}
@@ -284,7 +284,7 @@ public class DDMStructureCacheModel
 		_ddmForm =
 			(com.liferay.dynamic.data.mapping.model.DDMForm)
 				objectInput.readObject();
-		_ddmFormFieldsMap = (Map)objectInput.readObject();
+		ddmFormFieldsMap = (Map)objectInput.readObject();
 	}
 
 	@Override
@@ -385,7 +385,7 @@ public class DDMStructureCacheModel
 
 		objectOutput.writeObject(_className);
 		objectOutput.writeObject(_ddmForm);
-		objectOutput.writeObject(_ddmFormFieldsMap);
+		objectOutput.writeObject(ddmFormFieldsMap);
 	}
 
 	public long mvccVersion;
@@ -413,6 +413,6 @@ public class DDMStructureCacheModel
 	public long lastPublishDate;
 	public String _className;
 	public com.liferay.dynamic.data.mapping.model.DDMForm _ddmForm;
-	public Map _ddmFormFieldsMap;
+	public Map ddmFormFieldsMap;
 
 }
