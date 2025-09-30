@@ -73,7 +73,7 @@ public class TransformerAgent {
 		return value;
 	}
 
-	private static final Set<String> _fixupSubpackageNames = new HashSet<>(
+	private static final Set<String> _preservedSubpackageNames = new HashSet<>(
 		Arrays.asList("annotation.processing", "transaction.xa"));
 	private static final Set<String> _subpackageNames = new HashSet<>(
 		Arrays.asList(
@@ -105,7 +105,7 @@ public class TransformerAgent {
 
 		// Order matters, fixups need to be put into replacement map later
 
-		_fixupSubpackageNames.forEach(
+		_preservedSubpackageNames.forEach(
 			fixupSubpackageName -> {
 				String fixupJavaxPackage = "javax." + fixupSubpackageName;
 				String fixupJakartaPackage = "jakarta." + fixupSubpackageName;
