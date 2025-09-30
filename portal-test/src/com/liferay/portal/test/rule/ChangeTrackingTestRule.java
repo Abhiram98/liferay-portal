@@ -145,9 +145,9 @@ public class ChangeTrackingTestRule extends ClassTestRule<AutoCloseable> {
 		}
 
 		private CTTestRuleAdvice(
-			ThreadLocal<Deque<Object>> transactionExecutorsThreadLocal) {
+			ThreadLocal<Deque<Object>> transactionExecutors) {
 
-			_transactionExecutorsThreadLocal = transactionExecutorsThreadLocal;
+			_transactionExecutorsThreadLocal = transactionExecutors;
 		}
 
 		private boolean _hasCurrentTransactionExecutor() {
