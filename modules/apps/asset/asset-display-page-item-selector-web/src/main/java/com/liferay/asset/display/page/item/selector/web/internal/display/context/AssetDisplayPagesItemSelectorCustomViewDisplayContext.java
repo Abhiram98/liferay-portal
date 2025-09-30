@@ -51,7 +51,7 @@ public class AssetDisplayPagesItemSelectorCustomViewDisplayContext {
 
 		_httpServletRequest = httpServletRequest;
 		_itemSelectedEventName = itemSelectedEventName;
-		_assetDisplayPageSelectorCriterion = assetDisplayPageSelectorCriterion;
+		_assetDisplayPageItemSelectorCriterion = assetDisplayPageSelectorCriterion;
 		_portletURL = portletURL;
 
 		_portletRequest = (PortletRequest)httpServletRequest.getAttribute(
@@ -82,8 +82,8 @@ public class AssetDisplayPagesItemSelectorCustomViewDisplayContext {
 				LayoutPageTemplateEntryServiceUtil.
 					getLayoutPageCollectionsAndLayoutPageTemplateEntries(
 						_getGroupId(), getLayoutPageTemplateCollectionId(),
-						_assetDisplayPageSelectorCriterion.getClassNameId(),
-						_assetDisplayPageSelectorCriterion.getClassTypeId(),
+						_assetDisplayPageItemSelectorCriterion.getClassNameId(),
+						_assetDisplayPageItemSelectorCriterion.getClassTypeId(),
 						_getKeywords(),
 						LayoutPageTemplateEntryTypeConstants.DISPLAY_PAGE,
 						WorkflowConstants.STATUS_APPROVED,
@@ -93,8 +93,8 @@ public class AssetDisplayPagesItemSelectorCustomViewDisplayContext {
 			LayoutPageTemplateEntryServiceUtil.
 				getLayoutPageCollectionsAndLayoutPageTemplateEntriesCount(
 					_getGroupId(), getLayoutPageTemplateCollectionId(),
-					_assetDisplayPageSelectorCriterion.getClassNameId(),
-					_assetDisplayPageSelectorCriterion.getClassTypeId(),
+					_assetDisplayPageItemSelectorCriterion.getClassNameId(),
+					_assetDisplayPageItemSelectorCriterion.getClassTypeId(),
 					_getKeywords(),
 					LayoutPageTemplateEntryTypeConstants.DISPLAY_PAGE,
 					WorkflowConstants.STATUS_APPROVED));
@@ -260,7 +260,7 @@ public class AssetDisplayPagesItemSelectorCustomViewDisplayContext {
 
 	private SearchContainer<?> _assetDisplayPageSearchContainer;
 	private final AssetDisplayPageSelectorCriterion
-		_assetDisplayPageSelectorCriterion;
+		_assetDisplayPageItemSelectorCriterion;
 	private Long _groupId;
 	private final HttpServletRequest _httpServletRequest;
 	private final String _itemSelectedEventName;
