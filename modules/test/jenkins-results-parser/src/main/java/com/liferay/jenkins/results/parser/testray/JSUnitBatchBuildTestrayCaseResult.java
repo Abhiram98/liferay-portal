@@ -192,16 +192,16 @@ public class JSUnitBatchBuildTestrayCaseResult
 	}
 
 	private List<TestClassResult> _getTestClassResults() {
-		if (_testClassResults != null) {
-			return _testClassResults;
+		if (_testClassReports != null) {
+			return _testClassReports;
 		}
 
-		_testClassResults = new ArrayList<>();
+		_testClassReports = new ArrayList<>();
 
 		Build build = getBuild();
 
 		if (build == null) {
-			return _testClassResults;
+			return _testClassReports;
 		}
 
 		String taskDirectoryName = getName();
@@ -212,11 +212,11 @@ public class JSUnitBatchBuildTestrayCaseResult
 			String testResultTaskName = _getTestResultTaskName(testClassResult);
 
 			if (testResultTaskName.startsWith(taskDirectoryName)) {
-				_testClassResults.add(testClassResult);
+				_testClassReports.add(testClassResult);
 			}
 		}
 
-		return _testClassResults;
+		return _testClassReports;
 	}
 
 	private String _getTestResultTaskName(TestClassResult testClassResult) {
@@ -245,6 +245,6 @@ public class JSUnitBatchBuildTestrayCaseResult
 
 	private final JSUnitModulesTestClass _jsUnitModulesTestClass;
 	private final TestClassMethod _testClassMethod;
-	private List<TestClassResult> _testClassResults;
+	private List<TestClassResult> _testClassReports;
 
 }
