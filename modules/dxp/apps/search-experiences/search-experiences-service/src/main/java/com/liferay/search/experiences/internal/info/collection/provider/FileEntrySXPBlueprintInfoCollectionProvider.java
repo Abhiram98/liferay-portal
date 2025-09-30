@@ -115,11 +115,11 @@ public class FileEntrySXPBlueprintInfoCollectionProvider
 				assetSubtypeIdentifier.getGroupExternalReferenceCode(),
 				sxpBlueprint.getCompanyId());
 		}
-		catch (PortalException portalException) {
+		catch (PortalException exception) {
 			_log.error(
 				"Unable to get group with external reference code " +
 					assetSubtypeIdentifier.getGroupExternalReferenceCode(),
-				portalException);
+				exception);
 
 			return StringPool.BLANK;
 		}
