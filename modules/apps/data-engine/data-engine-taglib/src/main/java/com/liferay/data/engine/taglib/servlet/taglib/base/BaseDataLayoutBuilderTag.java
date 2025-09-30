@@ -19,7 +19,7 @@ public abstract class BaseDataLayoutBuilderTag extends com.liferay.taglib.util.I
 
 	@Override
 	public int doStartTag() throws JspException {
-		setAttributeNamespace(_ATTRIBUTE_NAMESPACE);
+		setAttributeNamespace(ATTRIBUTE_NAMESPACE);
 
 		return super.doStartTag();
 	}
@@ -191,7 +191,7 @@ public abstract class BaseDataLayoutBuilderTag extends com.liferay.taglib.util.I
 		setNamespacedAttribute(request, "submitButtonId", _submitButtonId);
 	}
 
-	protected static final String _ATTRIBUTE_NAMESPACE = "liferay-data-engine:data-layout-builder:";
+	protected static final String ATTRIBUTE_NAMESPACE = "liferay-data-engine:data-layout-builder:";
 
 	private static final String _END_PAGE =
 		"/data_layout_builder/end.jsp";
